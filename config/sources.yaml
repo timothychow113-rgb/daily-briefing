@@ -18,10 +18,9 @@ rss:
       url: https://www.federalreserve.gov/feeds/press_all.xml
       type: press_release
       fetch_full_text: true
-    - name: DatacenterDynamics
+    - name: DatacenterDynamics       # headlines only: full articles aren't fetchable for us
       url: https://www.datacenterdynamics.com/en/rss/
       type: news
-      fetch_full_text: true
     - name: Utility Dive
       url: https://www.utilitydive.com/feeds/news/
       type: news
