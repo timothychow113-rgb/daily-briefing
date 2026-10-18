@@ -79,7 +79,11 @@ def cmd_check_feeds(args: argparse.Namespace) -> None:
                 print(f"FAIL  {feed['name']}: {type(exc).__name__}: {exc}")
                 continue
             avg = sum(len(i.clean_text) for i, _ in entries) // max(len(entries), 1)
-            print(f"OK    {feed['name']}: {len(entries)} entries in last 7 days, avg {avg:,} chars of text")
+            line = f"OK    {feed['name']}: {len(entries)} entries in last 7 days, avg {avg:,} chars of text"
+            if feed.get("fetch_full_text") and entries and entries[0][1]:
+                full = rss.fetch_article(client, entries[0][1])
+                line += f"; full article: {len(full):,} chars" if full else "; full article: not available"
+            print(line)
 
 
 def cmd_not_yet(stage: str):

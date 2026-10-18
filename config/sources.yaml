@@ -10,19 +10,16 @@ rss:
   enabled: true
   lookback_hours: 36
   max_items_per_feed: 20
-  # Starter list. Not yet verified: run `python -m briefing check-feeds` (or the
-  # "check feeds" GitHub Action) and remove any that fail or give thin text.
+  # Starter list, checked 2026-10-18 (Data Center Frontier's feed 404'd and was dropped).
+  # Re-check with `python -m briefing check-feeds` or the "check feeds" GitHub Action.
   # type: news | press_release | filing   fetch_full_text: follow the link (robots.txt respected)
   feeds:
     - name: Federal Reserve
       url: https://www.federalreserve.gov/feeds/press_all.xml
       type: press_release
+      fetch_full_text: true
     - name: DatacenterDynamics
       url: https://www.datacenterdynamics.com/en/rss/
-      type: news
-      fetch_full_text: true
-    - name: Data Center Frontier
-      url: https://www.datacenterfrontier.com/rss
       type: news
       fetch_full_text: true
     - name: Utility Dive
