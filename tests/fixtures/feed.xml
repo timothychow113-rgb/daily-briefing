@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>Example Trade Press</title>
+<item>
+  <title>Utility signs 1 GW PPA with hyperscaler</title>
+  <link>https://example.com/ppa</link>
+  <pubDate>Sat, 17 Oct 2026 14:00:00 GMT</pubDate>
+  <description>&lt;p&gt;A regional utility signed a 20-year power purchase agreement for 1 GW of nuclear output.&lt;/p&gt;</description>
+</item>
+<item>
+  <title>Old story</title>
+  <link>https://example.com/old</link>
+  <pubDate>Mon, 01 Sep 2026 09:00:00 GMT</pubDate>
+  <description>Too old to include.</description>
+</item>
+</channel></rss>

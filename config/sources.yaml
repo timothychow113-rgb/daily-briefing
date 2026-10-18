@@ -1,18 +1,36 @@
 # Which sources to collect from. Edit freely; no code changes needed.
 
 gmail:
-  enabled: false          # turned on in Stage 1
+  enabled: true           # skipped with a message until GMAIL_* secrets exist
+  account: tchow29@amherst.edu
   label: briefing         # Gmail label your newsletter filter applies
   lookback_hours: 36
 
 rss:
-  enabled: false          # turned on in Stage 1, once each feed is tested
+  enabled: true
   lookback_hours: 36
   max_items_per_feed: 20
-  feeds: []
-  # - name: Example Trade Publication
-  #   url: https://example.com/feed
-  #   type: news           # news | press_release | central_bank
+  # Starter list, checked 2026-10-18 (Data Center Frontier's feed 404'd and was dropped).
+  # Re-check with `python -m briefing check-feeds` or the "check feeds" GitHub Action.
+  # type: news | press_release | filing   fetch_full_text: follow the link (robots.txt respected)
+  feeds:
+    - name: Federal Reserve
+      url: https://www.federalreserve.gov/feeds/press_all.xml
+      type: press_release
+      fetch_full_text: true
+    - name: DatacenterDynamics       # headlines only: full articles aren't fetchable for us
+      url: https://www.datacenterdynamics.com/en/rss/
+      type: news
+    - name: Utility Dive
+      url: https://www.utilitydive.com/feeds/news/
+      type: news
+      fetch_full_text: true
+    - name: SemiAnalysis
+      url: https://newsletter.semianalysis.com/feed
+      type: news
+    - name: Stratechery
+      url: https://stratechery.com/feed/
+      type: news
 
 edgar:
   enabled: false

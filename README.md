@@ -10,7 +10,7 @@ Macroeconomics, and a Concept Worth Understanding.
 | Stage | What | State |
 |---|---|---|
 | 0 | Project skeleton, config, storage | ✅ |
-| 1 | Gmail + RSS collection | ⏳ |
+| 1 | Gmail + RSS collection | 🔧 needs [Gmail setup](docs/gmail-setup.md) |
 | 2 | Claude synthesis → Markdown briefing (MVP) | ⏳ |
 | 3 | Weekday schedule on GitHub Actions | ⏳ |
 | 4 | Podcasts | ⏳ |
@@ -36,6 +36,16 @@ python -m briefing check-config
 python -m briefing init-db
 pytest -q
 ```
+
+Then follow [docs/gmail-setup.md](docs/gmail-setup.md) to connect your inbox.
+
+## Commands
+
+| Command | What it does |
+|---|---|
+| `python -m briefing collect -v` | Gather newsletters and feeds, store new items, list them |
+| `python -m briefing check-feeds` | Test every RSS feed in `config/sources.yaml` |
+| `python -m briefing check-config` | Show enabled sources and sections |
 
 ## Where to change things
 
