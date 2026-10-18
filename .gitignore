@@ -1,0 +1,12 @@
+# Secrets: never commit
+.env
+*.token.json
+credentials*.json
+client_secret*.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+*.egg-info/

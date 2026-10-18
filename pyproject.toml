@@ -1,0 +1,22 @@
+[project]
+name = "daily-briefing"
+version = "0.1.0"
+description = "Automated daily intelligence briefing: collect sources, synthesize with Claude, deliver by email."
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic",
+    "feedparser",
+    "httpx",
+    "trafilatura",
+    "pydantic>=2",
+    "pyyaml",
+    "python-dotenv",
+    "google-api-python-client",
+    "google-auth-oauthlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["briefing", "briefing.collectors"]

@@ -1,0 +1,1 @@
+"""Daily intelligence briefing pipeline."""

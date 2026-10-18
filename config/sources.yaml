@@ -1,0 +1,24 @@
+# Which sources to collect from. Edit freely; no code changes needed.
+
+gmail:
+  enabled: false          # turned on in Stage 1
+  label: briefing         # Gmail label your newsletter filter applies
+  lookback_hours: 36
+
+rss:
+  enabled: false          # turned on in Stage 1, once each feed is tested
+  lookback_hours: 36
+  max_items_per_feed: 20
+  feeds: []
+  # - name: Example Trade Publication
+  #   url: https://example.com/feed
+  #   type: news           # news | press_release | central_bank
+
+edgar:
+  enabled: false
+  forms: ["8-K", "S-1", "DEFM14A", "SC TO-T"]
+  watchlist: []           # tickers or CIKs
+
+limits:
+  max_chars_per_item: 20000
+  max_selected_stories: 10

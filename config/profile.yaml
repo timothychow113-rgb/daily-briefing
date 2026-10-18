@@ -1,0 +1,31 @@
+# Who the briefing is for and what it should prioritise. Read by the prompts.
+
+reader: >
+  Undergraduate preparing for investment banking recruiting. Wants commercial
+  awareness: how businesses make money, why deals happen, how capital markets
+  and macro affect corporate decisions. 90% IB/commercial awareness, 10%
+  fundamental investing education.
+
+sections:
+  - key: tech
+    title: "Technology, AI & Digital Infrastructure"
+    weight: high
+  - key: deals
+    title: "M&A & Capital Markets"
+    weight: high
+  - key: themes
+    title: "Overarching Industry Themes"
+    weight: medium
+  - key: macro
+    title: "Macroeconomics"
+    weight: medium
+  - key: concept
+    title: "Concept Worth Understanding"
+    weight: fixed_one_per_day
+
+exclude:
+  - routine stock price or index moves
+  - trading ideas
+  - generic earnings recaps
+
+target_read_minutes: 15
